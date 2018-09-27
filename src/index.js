@@ -1,16 +1,12 @@
 module.exports = function getZerosCount(number) {
 	
-  zero_count = 0;
+  let zero_count = 0;
 
- while ( Math.floor(number) > 0 )
- {
+  while (Math.floor( number ) > 0) {
+    number = number / 5;
+    zero_count = zero_count + Math.floor(number);
+  }
 
-number = number / 5;
-
-zero_count = zero_count + Math.floor(number);
-
- }
-
-return zero_count;
+  return zero_count;
 
 }
